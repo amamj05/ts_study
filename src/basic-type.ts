@@ -33,3 +33,32 @@ function infiniteLoop():never{
 }
 
 
+// null, undefined
+let a0813:null = null;
+let b0813:undefined = undefined;
+
+
+// enum 이넘  0부터 차례대로 할당된다
+enum Fruit {
+    Strawberry,
+    Banana,
+    Melon = 3,
+    grape = 11,
+    Pineapple,
+    Blueberry = '블루베리',
+    // cherry,  글자 다음에 지정값이 없으면 에러가 뜬다
+    Peach = 1,  //출력하면 Peach만 나온다 (Banana 생략됨)
+    Kiwi
+}
+
+console.log(Fruit[11]);
+console.log(Fruit['Pineapple']);
+console.log(Fruit['Blueberry']);
+console.log(Fruit[1]);
+
+let myFruit1:Fruit;
+myFruit1 = Fruit.Pineapple;
+console.log(myFruit1);
+
+let myFruit2:Fruit = Fruit.Melon;
+console.log(myFruit2);
