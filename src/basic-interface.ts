@@ -46,14 +46,29 @@ kimUser.gender = "male";    // 옵셔널 입력 가능
 // kimUser.email = "읽기 전용이라 수정 불가능"
 
 
+// type Union
 type manyType = null | undefined | string;
 type manyValue = 'Bus' | 'Car' | 'Bike' | 'Train';
 
+// let typeTest1:manyType = 1;  타입에러
+let typeTest2: manyType = null;
+let typeTest3: manyType = "1";
 
-interface Value1 {
-    type: number;
+
+
+//interface 선언적 확장
+interface Client {
+    name: string;
+    age: number;
 }
-interface Value2 {
-    type: string;
+
+interface Client { 
+    // 같은 이름으로 선언하면 자동으로 확장된다
+    gender: string;
 }
-type _manyValue = Value1 | Value2;
+
+const jieun: Client = {
+    name: 'jieun',
+    age: 27,
+    gender: 'female'
+}
