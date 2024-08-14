@@ -62,3 +62,14 @@ console.log(myFruit1);
 
 let myFruit2:Fruit = Fruit.Melon;
 console.log(myFruit2);
+
+
+/////////////// type Union  ////////////////////////////
+
+type manyType = null | undefined | string;
+type manyValue = 'Bus' | 'Car' | 'Bike' | 'Train';
+
+// let typeTest1:manyType = 1;  타입에러
+let typeTest2: manyType = null;
+let typeTest3: manyType = "1";
+let typeTest4: manyValue = 'Bike';

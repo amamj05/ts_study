@@ -1,30 +1,3 @@
-// TypeScript의 객체 타입은 object 이다.
-// object에는 속성값을 넣을 수가 없다
-
-let user: object
-
-user = {
-    name: "KIM",
-    age: 20
-}
-// console.log(user.name);  
-
-
-
-//
-// type과 interface
-type Person = {
-    name: string;
-    age: number;
-};
-
-let leeUser: Person = {
-    name: "LEE",
-    age: 20
-};
-console.log(leeUser.name);
-
-
 
 interface User {
     name: string;
@@ -52,19 +25,6 @@ kimUser.age = 30;       // 수정 가능
 console.log(kimUser.age);
 kimUser.gender = "male";    // 옵셔널 입력 가능
 // kimUser.email = "읽기 전용이라 수정 불가능"
-
-
-
-
-/////////////// type Union  ////////////////////////////
-
-type manyType = null | undefined | string;
-type manyValue = 'Bus' | 'Car' | 'Bike' | 'Train';
-
-// let typeTest1:manyType = 1;  타입에러
-let typeTest2: manyType = null;
-let typeTest3: manyType = "1";
-let typeTest4: manyValue = 'Bike';
 
 
 

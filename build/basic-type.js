@@ -47,3 +47,7 @@ myFruit1 = Fruit.Pineapple;
 console.log(myFruit1);
 let myFruit2 = Fruit.Melon;
 console.log(myFruit2);
+// let typeTest1:manyType = 1;  타입에러
+let typeTest2 = null;
+let typeTest3 = "1";
+let typeTest4 = 'Bike';
