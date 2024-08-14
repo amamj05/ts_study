@@ -24,19 +24,23 @@ let leeUser: Person = {
 console.log(leeUser.name);
 
 
+
 interface User {
     name: string;
     age: number;
     gender? : string;
+    readonly email : string;
 }
 
 let kimUser: User = {
     name: 'kim',
-    age: 20
+    age: 20,
     //gender 속성은 옵션값으로 설정되어있음
+    email: "test@test.com"
 }
 
 console.log(kimUser.name);
 kimUser.age = 30;       // 수정 가능
 console.log(kimUser.age);
 kimUser.gender = "male";    // 옵셔널 입력 가능
+// kimUser.email = "읽기 전용이라 수정 불가능"
