@@ -11,6 +11,7 @@ user = {
 
 
 
+//
 // type과 interface
 type Person = {
     name: string;
@@ -53,6 +54,7 @@ kimUser.gender = "male";    // 옵셔널 입력 가능
 // kimUser.email = "읽기 전용이라 수정 불가능"
 
 
+//
 // type Union
 type manyType = null | undefined | string;
 type manyValue = 'Bus' | 'Car' | 'Bike' | 'Train';
@@ -62,7 +64,7 @@ let typeTest2: manyType = null;
 let typeTest3: manyType = "1";
 let typeTest4: manyValue = 'Bike';
 
-
+//
 //interface 선언적 확장(상속)
 interface Client1 {
     name: string;
@@ -88,7 +90,6 @@ interface Client2 {
 }
 
 interface Client3 extends Client2{ 
-    
     gender: string;
 }
 
