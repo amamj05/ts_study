@@ -64,18 +64,36 @@ let typeTest4: manyValue = 'Bike';
 
 
 //interface 선언적 확장(상속)
-interface Client {
+interface Client1 {
     name: string;
     age: number;
 }
 
-interface Client { 
+interface Client1 { 
     // 같은 이름으로 선언하면 자동으로 확장된다
     gender: string;
 }
 
-const jieun: Client = {
+const ClientUser1: Client1 = {
     name: 'kim',
     age: 27,
     gender: 'female'
+}
+
+//
+// extends 상속
+interface Client2 {
+    name: string;
+    age: number;
+}
+
+interface Client3 extends Client2{ 
+    
+    gender: string;
+}
+
+const ClientUser2: Client3 = {
+    name: 'kim',
+    age: 20,
+    gender: 'male'
 }
