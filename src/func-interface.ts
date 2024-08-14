@@ -22,3 +22,39 @@ const adult:returnBoolean = (a)=>{
 }
 
 console.log(adult(30));
+console.log(adult(10));
+
+
+
+/////////////////  implements  ////////////////////////////
+
+interface Car {
+    color : string;
+    wheels : number;
+    fill(): void;
+}
+
+class BMW1 implements Car {
+    color = "red";
+    wheels = 4;
+    fill(){
+        console.log('fill up gasoline');
+    }
+}
+
+class BMW2 implements Car {
+    color;
+    wheels = 4;
+    constructor(z:string){
+        this.color = z;
+        // 생성될때 입력 받기
+    }
+    fill(){
+        console.log('fill up gasoline');
+    }
+}
+const a = new BMW1();
+const b = new BMW2('Blue');
+console.log(a)
+console.log(b)
+b.fill();

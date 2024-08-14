@@ -54,8 +54,10 @@ kimUser.gender = "male";    // 옵셔널 입력 가능
 // kimUser.email = "읽기 전용이라 수정 불가능"
 
 
-//
-// type Union
+
+
+/////////////// type Union  ////////////////////////////
+
 type manyType = null | undefined | string;
 type manyValue = 'Bus' | 'Car' | 'Bike' | 'Train';
 
@@ -64,13 +66,15 @@ let typeTest2: manyType = null;
 let typeTest3: manyType = "1";
 let typeTest4: manyValue = 'Bike';
 
-//
-//interface 선언적 확장(상속)
+
+
+
+///////////////  interface 선언적 확장(상속)  ////////////////////////////
+
 interface Client1 {
     name: string;
     age: number;
 }
-
 interface Client1 { 
     // 같은 이름으로 선언하면 자동으로 확장된다
     gender: string;
@@ -82,8 +86,9 @@ const ClientUser1: Client1 = {
     gender: 'female'
 }
 
-//
-// extends 상속
+
+/////////////  extends 상속  ////////////////////////////
+
 interface Client2 {
     name: string;
     age: number;
@@ -97,4 +102,11 @@ const ClientUser2: Client3 = {
     name: 'kim',
     age: 20,
     gender: 'male'
+}
+
+
+
+///////////// 한번에 여러개 확장  ////////////////////////////
+interface Client4 extends Client1, Client2{ 
+    gender: string;
 }
