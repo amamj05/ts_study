@@ -30,13 +30,20 @@ interface User {
     age: number;
     gender?: string;   // 옵션 설정이 없으면 사용할때 모든 값을 넣어줘야한다
     readonly email: string;  //생성할때만 가능
+    // [test1:number] : string;
+    [test2:number] : Score;    
 }
+
+type Score = 'A' | 'B' | 'C' | 'D';
 
 let kimUser: User = {
     name: 'kim',
     age: 20,
     //gender 속성은 옵션값으로 설정되어있음
-    email: "test@test.com"
+    email: "test@test.com",
+    1: 'A',
+    3: 'C',
+    // 7: 'z'  타입 에러
 }
 
 console.log(kimUser.name);
@@ -53,10 +60,10 @@ type manyValue = 'Bus' | 'Car' | 'Bike' | 'Train';
 // let typeTest1:manyType = 1;  타입에러
 let typeTest2: manyType = null;
 let typeTest3: manyType = "1";
+let typeTest4: manyValue = 'Bike';
 
 
-
-//interface 선언적 확장
+//interface 선언적 확장(상속)
 interface Client {
     name: string;
     age: number;
@@ -68,7 +75,7 @@ interface Client {
 }
 
 const jieun: Client = {
-    name: 'jieun',
+    name: 'kim',
     age: 27,
     gender: 'female'
 }
