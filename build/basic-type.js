@@ -22,6 +22,9 @@ function infiniteLoop() {
         // 끝나지 않는 함수 never
     }
 }
+// null, undefined
+let a0813 = null;
+let b0813 = undefined;
 // enum 이넘  0부터 차례대로 할당된다
 var Fruit;
 (function (Fruit) {
