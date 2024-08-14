@@ -28,8 +28,8 @@ console.log(leeUser.name);
 interface User {
     name: string;
     age: number;
-    gender? : string;
-    readonly email : string;
+    gender?: string;   // 옵션 설정이 없으면 사용할때 모든 값을 넣어줘야한다
+    readonly email: string;  //생성할때만 가능
 }
 
 let kimUser: User = {
@@ -44,3 +44,16 @@ kimUser.age = 30;       // 수정 가능
 console.log(kimUser.age);
 kimUser.gender = "male";    // 옵셔널 입력 가능
 // kimUser.email = "읽기 전용이라 수정 불가능"
+
+
+type manyType = null | undefined | string;
+type manyValue = 'Bus' | 'Car' | 'Bike' | 'Train';
+
+
+interface Value1 {
+    type: number;
+}
+interface Value2 {
+    type: string;
+}
+type _manyValue = Value1 | Value2;
