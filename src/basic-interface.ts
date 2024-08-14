@@ -47,7 +47,7 @@ const ClientUser1: Client1 = {
 }
 
 
-/////////////  extends 상속  ////////////////////////////
+///////////////  extends 상속  ////////////////////////////
 
 interface Client2 {
     name: string;

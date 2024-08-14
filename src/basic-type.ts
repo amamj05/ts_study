@@ -73,3 +73,23 @@ type manyValue = 'Bus' | 'Car' | 'Bike' | 'Train';
 let typeTest2: manyType = null;
 let typeTest3: manyType = "1";
 let typeTest4: manyValue = 'Bike';
+
+
+
+/////////////// 확장 ////////////////////////////
+type userExtends = {
+    name: string;
+    age: number;
+};
+
+type _userExtends = userExtends & {
+    email: string;
+    gender: string;
+};
+
+let extendUsers : _userExtends = {
+    name: "LEE",
+    age: 20,
+    email: 'test@test.com',
+    gender: 'male'
+};
