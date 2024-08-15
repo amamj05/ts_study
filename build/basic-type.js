@@ -51,3 +51,9 @@ console.log(myFruit2);
 let typeTest2 = null;
 let typeTest3 = "1";
 let typeTest4 = 'Bike';
+let extendUsers = {
+    name: "LEE",
+    age: 20,
+    email: 'test@test.com',
+    gender: 'male'
+};
