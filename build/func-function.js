@@ -23,3 +23,28 @@ const printHiLEE = hi2();
 console.log(printHiLEE);
 const printHiPARK = hi2("PARK");
 console.log(printHiPARK);
+///////////////////// 매개변수 일부 옵셔널 /////////////////////////////
+function hi3(name, since) {
+    //선택적 매개변수는 뒤쪽에 위치시켜야한다
+    if (since !== undefined) {
+        return `${name}의 마을에 오신것을 환영합니다. SINCE ${since}`;
+    }
+    else {
+        return `${name}의 마을에 오신것을 환영합니다`;
+    }
+}
+function hi4(since, name) {
+    //선택적 매개변수를 앞에 두고 싶을때
+    if (since !== undefined) {
+        return `${name}의 마을에 오신것을 환영합니다. SINCE ${since}`;
+    }
+    else {
+        return `${name}의 마을에 오신것을 환영합니다`;
+    }
+}
+///////////////////// 배열 매개변수 /////////////////////////////
+function add5(...num) {
+    return num.reduce((result, num) => result + num, 0);
+}
+console.log(add5(1, 2, 3));
+console.log(add5(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
