@@ -105,3 +105,15 @@ class staticCar extends staticEngine {
 const staticmyCar = new staticCar("myCar", 5000);
 staticmyCar.start();
 staticmyCar.engineCheck();
+
+
+class noCar {
+    color: string;
+    constructor() {
+        this.color = "red"; // 기본값 설정
+    }
+}
+
+class nooCar {
+    color: string = "red";
+}
