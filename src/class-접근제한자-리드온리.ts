@@ -67,16 +67,41 @@ class readEngine {
 
 class readCar extends readEngine {
     constructor(
-        private name: string,
+        name: string,
         public price: number,
         color: string) {
         super(name, color);
     }
     start() {
-        console.log(`이 ${this.name} 자동차는 ${this.engine} 엔진입니다`);
+        console.log(`이 자동차는 ${this.engine} 엔진입니다`);
     }
 }
 
 const readmyCar = new readCar("myCar", 5000, "blue");
 readmyCar.start();
 readmyCar.nameCheck();
+
+
+////////////////////////////////// static /////////////////////////////////
+class staticEngine {
+    static engine: string = "16기통";
+
+    engineCheck() {
+        console.log(`${staticEngine.engine} 엔진입니다`);
+    }
+}
+
+class staticCar extends staticEngine {
+    constructor(
+        private name: string,
+        public price: number) {
+        super();
+    }
+    start() {
+        console.log(`이 자동차는 ${staticEngine.engine} 엔진입니다`);
+    }
+}
+
+const staticmyCar = new staticCar("myCar", 5000);
+staticmyCar.start();
+staticmyCar.engineCheck();
