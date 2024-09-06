@@ -98,14 +98,18 @@ function printBook(data) {
         // let coupon_ = data.event as {coupon?:string};
         console.log(`주문하신 책의 이름은 ${data.name}이며, 적용된 이벤트는 ${data.event.coupon}입니다`);
     }
-    else if (typeof data.event === null) {
+    else if (data.event === null) {
         console.log(`주문하신 책의 이름은 ${data.name}이며, 적용된 이벤트는 없습니다`);
+    }
+    else {
+        console.log("예기치못한 오류가 발생했습니다");
     }
 }
 printBook(bookG3);
 printBook(bookG4);
 printBook(bookG5);
-console.log(bookG4.event.coupon);
+console.log(JSON.stringify(bookG4.event.coupon));
+console.log(bookG5.event);
 ///////////////////////////////////////////
 const arrG3 = [];
 // arrG3.push(1)
