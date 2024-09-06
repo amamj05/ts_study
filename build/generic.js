@@ -82,7 +82,7 @@ const bookG4 = {
     price: 15000,
     event: {
         coupon: "9월 사은품 증정이벤트",
-        number: 1
+        number_: 1
     }
 };
 const bookG5 = {
@@ -94,9 +94,9 @@ function printBook(data) {
     if (typeof data.event === "string") {
         console.log(`주문하신 책의 이름은 ${data.name}이며, 적용된 이벤트는 ${data.event}입니다`);
     }
-    else if (typeof data.event === "object") {
+    else if (typeof data.event === "object" && data.event) {
         // let coupon_ = data.event as {coupon?:string};
-        console.log(`주문하신 책의 이름은 ${data.name}이며, 적용된 이벤트는 ${(data.event)}입니다`);
+        console.log(`주문하신 책의 이름은 ${data.name}이며, 적용된 이벤트는 ${data.event.coupon}입니다`);
     }
     else if (typeof data.event === null) {
         console.log(`주문하신 책의 이름은 ${data.name}이며, 적용된 이벤트는 없습니다`);
