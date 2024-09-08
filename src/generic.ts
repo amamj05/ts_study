@@ -110,7 +110,7 @@ const bookG3: Book3<string> = {
     event: "8월 이벤트 10% 할인"
 }
 
-const bookG4: Book3<{coupon:string, number_: number}> = {
+const bookG4: Book3<{ coupon: string, number_: number }> = {
     name: "유니온/교차타입 강좌",
     price: 15000,
     event: {
@@ -125,18 +125,17 @@ const bookG5: Book3<null> = {
     event: null
 }
 
-function printBook<T>(data:Book3<T>): void {
-    if (typeof data.event === "string"){
+function printBook<T>(data: Book3<T>): void {
+    if (typeof data.event === "string") {
         console.log(
             `주문하신 책의 이름은 ${data.name}이며, 적용된 이벤트는 ${data.event}입니다`)
-    } else if (typeof data.event === "object" && (data.event as {coupon:string, number_ :number})){
-        // let coupon_ = data.event as {coupon?:string};
+    } else if (typeof data.event === "object" && (data.event as { coupon: string, number_: number })) {
         console.log(
-            `주문하신 책의 이름은 ${data.name}이며, 적용된 이벤트는 ${(data.event as {coupon:string}).coupon}입니다`)
-    } else if (data.event === null){
+            `주문하신 책의 이름은 ${data.name}이며, 적용된 이벤트는 ${(data.event as { coupon: string }).coupon}입니다`)
+    } else if (data.event === null) {
         console.log(
             `주문하신 책의 이름은 ${data.name}이며, 적용된 이벤트는 없습니다`)
-    } else {console.log("예기치못한 오류가 발생했습니다")}
+    } else { console.log("예기치못한 오류가 발생했습니다") }
 }
 
 printBook(bookG3);
