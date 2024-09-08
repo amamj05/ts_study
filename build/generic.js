@@ -95,7 +95,6 @@ function printBook(data) {
         console.log(`주문하신 책의 이름은 ${data.name}이며, 적용된 이벤트는 ${data.event}입니다`);
     }
     else if (typeof data.event === "object" && data.event) {
-        // let coupon_ = data.event as {coupon?:string};
         console.log(`주문하신 책의 이름은 ${data.name}이며, 적용된 이벤트는 ${data.event.coupon}입니다`);
     }
     else if (data.event === null) {
